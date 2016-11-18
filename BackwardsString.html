@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+		<script LANGUAGE= "JavaScript">
+		function testResults (form) {
+			var EncryptVar = form.inputbox.value;
+			var crypt=[];
+			var currentLetter
+			for (currentLetter= EncryptVar.length -1; currentLetter >= 0; currentLetter--){
+				var currentSymbol = EncryptVar.charAt(currentLetter);
+				crypt.push (currentSymbol);
+			}
+			alert (crypt.join(""));
+		}
+		</script>
+
+</head>
+	<body>
+		<form name="myForm" action="" method="get"> Enter a string:<br>
+			<input type="text" name="inputbox" value= ""><p>
+			<input type="button" name="Button" value="Encrypt" onClick="testResults(this.form)">
+		</form>
+	</body>
+</html>
